@@ -27,9 +27,7 @@ J=sum((h - y).^2) /(2*m) + r;
 r2=lambda * theta(2:end) / m;
 grad = (h-y)'*X / m;
 grad = grad(:);
-if (m > 2)
-    grad(2:end) = grad(2:end) + r2;
-end
+grad(2:end) = grad(2:end) + r2;
 
 % =========================================================================
 
